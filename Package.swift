@@ -5,18 +5,18 @@ import PackageDescription
 
 // swiftlint:disable all
 let package = Package(
-    name: "SparkComponent___COMPONENT_NAME___",
+    name: "SparkComponentCard",
     platforms: [
         .iOS(.v16)
     ],
     products: [
         .library(
-            name: "SparkComponent___COMPONENT_NAME___",
-            targets: ["SparkComponent___COMPONENT_NAME___"]
+            name: "SparkComponentCard",
+            targets: ["SparkComponentCard"]
         ),
         .library(
-            name: "SparkComponent___COMPONENT_NAME___Testing",
-            targets: ["SparkComponent___COMPONENT_NAME___Testing"]
+            name: "SparkComponentCardTesting",
+            targets: ["SparkComponentCardTesting"]
         )
     ],
     dependencies: [
@@ -33,7 +33,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SparkComponent___COMPONENT_NAME___",
+            name: "SparkComponentCard",
             dependencies: [
                 .product(
                     name: "SparkCommon",
@@ -47,9 +47,9 @@ let package = Package(
             path: "Sources/Core"
         ),
         .target(
-            name: "SparkComponent___COMPONENT_NAME___Testing",
+            name: "SparkComponentCardTesting",
             dependencies: [
-                "SparkComponent___COMPONENT_NAME___",
+                "SparkComponentCard",
                 .product(
                     name: "SparkCommon",
                     package: "spark-ios-common"
@@ -70,10 +70,10 @@ let package = Package(
             path: "Sources/Testing"
         ),
         .testTarget(
-            name: "SparkComponent___COMPONENT_NAME___UnitTests",
+            name: "SparkComponentCardUnitTests",
             dependencies: [
-                "SparkComponent___COMPONENT_NAME___",
-                "SparkComponent___COMPONENT_NAME___Testing",
+                "SparkComponentCard",
+                "SparkComponentCardTesting",
                 .product(
                     name: "SparkCommonTesting",
                     package: "spark-ios-common"
@@ -86,10 +86,10 @@ let package = Package(
             path: "Tests/UnitTests"
         ),
         .testTarget(
-            name: "SparkComponent___COMPONENT_NAME___SnapshotTests",
+            name: "SparkComponentCardSnapshotTests",
             dependencies: [
-                "SparkComponent___COMPONENT_NAME___",
-                "SparkComponent___COMPONENT_NAME___Testing",
+                "SparkComponentCard",
+                "SparkComponentCardTesting",
                 .product(
                     name: "SparkCommonSnapshotTesting",
                     package: "spark-ios-common"
