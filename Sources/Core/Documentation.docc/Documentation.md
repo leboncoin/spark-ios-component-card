@@ -30,4 +30,4 @@ If an action is provided, the card will be treated as a button.
 ### Resources
 
 - Specification on [ZeroHeight](https://zeroheight.com/1186e1705/p/51f428-card)
-- Desing on [Figma](https://www.figma.com/design/0QchRdipAVuvVoDfTjLrgQ/Spark-Component-Specs?node-id=59075-1497)
+- Design on [Figma](https://www.figma.com/design/0QchRdipAVuvVoDfTjLrgQ/Spark-Component-Specs?node-id=59075-1497)
