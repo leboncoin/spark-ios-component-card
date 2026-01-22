@@ -253,7 +253,7 @@ enum CardScenarioSnapshotTests: String, CaseIterable {
         // Classic
         items.append(.init(
             scenario: self,
-            documentationName: "_classic"
+            documentationName: "classic"
         ))
 
         // Backdrop
@@ -261,7 +261,7 @@ enum CardScenarioSnapshotTests: String, CaseIterable {
             scenario: self,
             isBackdrop: true,
             isHighlighted: true,
-            documentationName: "_with_backdrop"
+            documentationName: "with_backdrop"
         ))
 
         return items

@@ -305,6 +305,8 @@ public final class SparkUICard: UIControl {
         self.updateBackdropGradiant()
     }
 
+    // MARK: - Actions
+
     public override func addAction(
         _ action: UIAction,
         for controlEvents: UIControl.Event
