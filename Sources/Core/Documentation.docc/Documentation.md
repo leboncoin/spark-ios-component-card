@@ -1,6 +1,6 @@
 # ``SparkComponentCard``
 
-The Spark Cards display content and actions about a single subject..
+The Spark Cards display content and actions about a single subject.
 
 ## Overview
 
