@@ -195,47 +195,45 @@ public struct SparkCard<Content>: View where Content: View {
     }
 
     private func mainContent() -> some View {
-        ZStack(alignment: .center) {
-            VStack(alignment: .leading, spacing: CardConstants.spacing) {
-                // Backdrop
-                if self.isBackdrop {
-                    ZStack {
-                        Rectangle()
-                            .fill(self.viewModel.colors.backdrop.background)
+        VStack(alignment: .leading, spacing: CardConstants.spacing) {
+            // Backdrop
+            if self.isBackdrop {
+                ZStack {
+                    Rectangle()
+                        .fill(self.viewModel.colors.backdrop.background)
 
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    gradient: .init(colors: self.viewModel.colors.backdrop.colors),
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
+                    Rectangle()
+                        .fill(
+                            LinearGradient(
+                                gradient: .init(colors: self.viewModel.colors.backdrop.colors),
+                                startPoint: .leading,
+                                endPoint: .trailing
                             )
-                    }
-                    .frame(height: CardConstants.backdropHeight)
-                    .accessibilityHidden(true)
+                        )
                 }
+                .frame(height: CardConstants.backdropHeight)
+                .accessibilityHidden(true)
+            }
 
-                // Content
-                CardContentView(
-                    viewModel: self.viewModel,
-                    content: self.content
-                )
-            }
-            .background(self.viewModel.colors.background)
-            .sparkBorder(
-                width: self.viewModel.border.width,
-                radius: self.viewModel.border.radius,
-                isHighlighted: self.isHighlighted,
-                colorToken: self.viewModel.colors.border
+            // Content
+            CardContentView(
+                viewModel: self.viewModel,
+                content: self.content
             )
-            .dimmedOverlay(self.viewModel.dim) {
-                self.viewModel.colors.dimBackground.color
-                    .sparkCornerRadius(
-                        self.viewModel.border.radius,
-                        isHighlighted: self.isHighlighted
-                    )
-            }
+        }
+        .background(self.viewModel.colors.background)
+        .sparkBorder(
+            width: self.viewModel.border.width,
+            radius: self.viewModel.border.radius,
+            isHighlighted: self.isHighlighted,
+            colorToken: self.viewModel.colors.border
+        )
+        .dimmedOverlay(self.viewModel.dim) {
+            self.viewModel.colors.dimBackground.color
+                .sparkCornerRadius(
+                    self.viewModel.border.radius,
+                    isHighlighted: self.isHighlighted
+                )
         }
     }
 }
