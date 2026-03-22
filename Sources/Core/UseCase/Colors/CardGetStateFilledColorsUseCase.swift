@@ -28,11 +28,6 @@ struct CardGetStateFilledColorsUseCase: CardGetStateColorsUseCaseable {
             pressed: colors.states.alertPressed
         )
 
-        case .basic: .init(
-            background: colors.basic.basic,
-            pressed: colors.states.basicPressed
-        )
-
         case .error: .init(
             background: colors.feedback.error,
             pressed: colors.states.errorPressed

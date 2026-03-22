@@ -18,7 +18,6 @@ final class CardIntentTests: XCTestCase {
         let expectedCases: [CardIntent] = [
             .accent,
             .alert,
-            .basic,
             .error,
             .info,
             .main,
@@ -30,7 +29,7 @@ final class CardIntentTests: XCTestCase {
 
         // THEN
         XCTAssertEqual(CardIntent.allCases, expectedCases)
-        XCTAssertEqual(CardIntent.allCases.count, 10)
+        XCTAssertEqual(CardIntent.allCases.count, 9)
     }
 
     func testDefaultValue() {

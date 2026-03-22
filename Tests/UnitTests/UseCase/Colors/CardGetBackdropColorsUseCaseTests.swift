@@ -75,29 +75,6 @@ final class CardGetBackdropColorsUseCaseTests: XCTestCase {
         XCTAssertEqual(colors, expectedBackdropColors)
     }
 
-    func testExecuteWithBasicIntent() {
-        // GIVEN
-        let intent = CardIntent.basic
-        let isPressed = false
-        let expectedColor = self.theme.colors.basic.basic
-
-        // WHEN
-        let colors = self.useCase.execute(
-            theme: self.theme,
-            intent: intent,
-            isPressed: isPressed
-        )
-
-        // THEN
-        let expectedBackdropColors = CardBackdropColors(
-            background: self.theme.colors.base.surface,
-            start: expectedColor.opacity(self.theme.dims.dim4),
-            end: expectedColor.opacity(self.theme.dims.dim2)
-        )
-
-        XCTAssertEqual(colors, expectedBackdropColors)
-    }
-
     func testExecuteWithErrorIntent() {
         // GIVEN
         let intent = CardIntent.error
