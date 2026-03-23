@@ -36,8 +36,6 @@ final class CardGetBackdropColorsUseCase: CardGetBackdropColorsUseCaseable {
             colors.accent.accent
         case .alert:
             colors.feedback.alert
-        case .basic:
-            colors.basic.basic
         case .error:
             colors.feedback.error
         case .info:

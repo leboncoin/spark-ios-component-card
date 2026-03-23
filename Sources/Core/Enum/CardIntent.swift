@@ -10,7 +10,6 @@
 public enum CardIntent: CaseIterable {
     case accent
     case alert
-    case basic
     case error
     case info
     case main

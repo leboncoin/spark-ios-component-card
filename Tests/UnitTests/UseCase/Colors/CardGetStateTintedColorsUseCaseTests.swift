@@ -56,20 +56,6 @@ final class CardGetStateTintedColorsUseCaseTests: XCTestCase {
         XCTAssertTrue(stateColors.pressedBorder.equals(self.theme.colors.states.alertContainerPressed))
     }
 
-    func testExecuteWithBasicIntent() {
-        // GIVEN
-        let intent = CardIntent.basic
-
-        // WHEN
-        let stateColors = self.useCase.execute(theme: self.theme, intent: intent)
-
-        // THEN
-        XCTAssertTrue(stateColors.background.equals(self.theme.colors.basic.basicContainer))
-        XCTAssertTrue(stateColors.pressedBackground.equals(self.theme.colors.states.basicContainerPressed))
-        XCTAssertTrue(stateColors.border.equals(self.theme.colors.basic.basicContainer))
-        XCTAssertTrue(stateColors.pressedBorder.equals(self.theme.colors.states.basicContainerPressed))
-    }
-
     func testExecuteWithErrorIntent() {
         // GIVEN
         let intent = CardIntent.error

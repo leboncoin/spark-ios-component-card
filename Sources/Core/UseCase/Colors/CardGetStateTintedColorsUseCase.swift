@@ -28,11 +28,6 @@ struct CardGetStateTintedColorsUseCase: CardGetStateColorsUseCaseable {
             pressed: colors.states.alertContainerPressed
         )
 
-        case .basic: .init(
-            background: colors.basic.basicContainer,
-            pressed: colors.states.basicContainerPressed
-        )
-
         case .error: .init(
             background: colors.feedback.errorContainer,
             pressed: colors.states.errorContainerPressed

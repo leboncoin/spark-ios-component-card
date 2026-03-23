@@ -33,13 +33,6 @@ struct CardGetStateOutlinedColorsUseCase: CardGetStateColorsUseCaseable {
             pressedBackground: colors.feedback.alert.opacity(opacity)
         )
 
-        case .basic: .init(
-            border: colors.basic.basic,
-            pressedBorder: colors.basic.basic,
-            background: colors.base.surface,
-            pressedBackground: colors.basic.basic.opacity(opacity)
-        )
-
         case .error: .init(
             border: colors.feedback.error,
             pressedBorder: colors.feedback.error,
